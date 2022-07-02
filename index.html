@@ -4,12 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 <body>
-    
+    <header class="text-center bg-info">
+        <h1> Weather Dashboard </h1>
+    </header>
 
+    <div class="px-5 justify-content-between">
+        <div class="row px-2">
+            
+            <div class="border col-4">
+                <h2 class="pl-2">Search for a City:</h2>
+                <form id="user-form" class="pl-2">
+                    <input name="city" id="city" type="text" class="form-input w-100" />
+                    <button type="submit" class="btn w-100 bg-info my-1">Search</button>
+                </form>
+                <div id="search-history" class="border-top border-dark pl-2">
+        
+                </div>
+            </div>
+            
+            <div id="error-message" class="col-8 border border-dark p-2 d-none">
+
+            </div>
+
+            <div class="col-8 d-none" id="weather">
+                
+                <div id="todays-forecast" class="border border-dark p-2">
+                    <h2> <span class="city">Atlanta</span> <span class="date">(6/30/2022)</span></h2>
+                    <p>Temp: <span class="today-temp">74.01</span>F</p>
+                    <p>Wind: <span class="today-wind">6.67</span>MPH</p>
+                    <p>Humidity: <span class="today-humid">46</span> %</p>
+                    <p>UV Index: <span class="today-uv badge px-3 py-1 text-light bg-success"> 0.47 </span></p>
+                </div>
+
+                <div id="five-day-forecast" class="col-12">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row justify-content-between">
+                        <div class="col-2 card bg-dark text-light five-day"> 
+                            <h4>7/1/2022</h4>
+                            <img class="weather-icon"/>
+                            <p>Temp: <span class="5-day-temp">77.60 </span>F</p>
+                            <p>Wind: <span class="5-day-wind">6.67 </span>MPH</p>
+                            <p>Humidity: <span class="5-day-humid">46 </span>%</p>
+                        </div>
+                        <div class="col-2 card bg-dark text-light five-day"> 
+                            <h4>7/2/2022</h4>
+                            <img class="weather-icon"/>
+                            <p>Temp: <span class="5-day-temp">77.60 </span>F</p>
+                            <p>Wind: <span class="5-day-wind">6.67 </span>MPH</p>
+                            <p>Humidity: <span class="5-day-humid">46 </span>%</p>
+                        </div>
+                        <div class="col-2 card bg-dark text-light five-day"> 
+                            <h4>7/3/2022</h4>
+                            <img class="weather-icon"/>
+                            <p>Temp: <span class="5-day-temp">77.60 </span>F</p>
+                            <p>Wind: <span class="5-day-wind">6.67 </span>MPH</p>
+                            <p>Humidity: <span class="5-day-humid">46 </span>%</p>
+                        </div>
+                        <div class="col-2 card bg-dark text-light five-day"> 
+                            <h4>7/4/2022</h4>
+                            <img class="weather-icon"/>
+                            <p>Temp: <span class="5-day-temp">77.60 </span>F</p>
+                            <p>Wind: <span class="5-day-wind">6.67 </span>MPH</p>
+                            <p>Humidity: <span class="5-day-humid">46 </span>%</p>
+                        </div>
+                        <div class="col-2 card bg-dark text-light five-day"> 
+                            <h4>7/5/2022</h4>
+                            <img class="weather-icon"/>
+                            <p>Temp: <span class="5-day-temp">77.60 </span>F</p>
+                            <p>Wind: <span class="5-day-wind">6.67 </span>MPH</p>
+                            <p>Humidity: <span class="5-day-humid">46 </span>%</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div> 
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
