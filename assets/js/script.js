@@ -36,7 +36,7 @@ function formSubmitHandler(event) {
 function getLatLong(city) {
     day = moment();
     errorMessageEl.classList.add("d-none")
-    var apiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city},&limit=1&appid=${key}`
+    var apiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city},&limit=1&appid=${key}`
     var lat;
     var long;
     fetch(apiUrl).then(function (response) {
